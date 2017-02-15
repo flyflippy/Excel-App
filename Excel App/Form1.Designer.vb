@@ -591,7 +591,7 @@ Partial Class Form1
         startTime = DateTime.Now
 
 
-        For i = 0 To 50000000
+        For i = 0 To 5000000
             'x = InStrRev(benchString, benchChar, , CompareMethod.Text)
             'x = InStr(benchString, benchChar, CompareMethod.Text)
             'x = benchString.IndexOf(benchChar)
