@@ -548,7 +548,9 @@ Partial Class Form1
         x = InStrRev(tempstr, xstr, , CompareMethod.Text)
         lenstr = Len(tempstr)
 
-        finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+        'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+
+        finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
 
 
         finstr2 = RTrim(Strings.Left(tempstr, x - 1))
@@ -619,7 +621,7 @@ Partial Class Form1
 
             'Mid benchmark
             'tempStr = Mid(benchString, 4, 5) 'debug 641  release 706
-            tempStr = benchString.Substring(4 - 1, 5) 'debug 515 release 564
+            'tempStr = benchString.Substring(4 - 1, 5) 'debug 515 release 564
 
 
 
