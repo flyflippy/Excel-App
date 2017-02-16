@@ -459,10 +459,12 @@ Partial Class Form1
             lenstr = Len(tempstr)
 
             'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
-            finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
+            'finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
 
             If x <> 0 Then
-                finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+                'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+                finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
+
                 finstr2 = RTrim(Strings.Left(tempstr, x - 1))
             Else
 
@@ -474,7 +476,7 @@ Partial Class Form1
 
             End If
 
-
+            lastArray.
 
             lastArray(i - 1, 1) = finstr
             lastArray(i - 1, 0) = finstr2
