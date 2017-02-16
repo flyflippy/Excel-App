@@ -470,6 +470,8 @@ Partial Class Form1
 
                 finstr2 = Trim(tempstr)
                 finstr = ""
+
+
             End If
 
 
@@ -598,7 +600,7 @@ Partial Class Form1
         startTime = DateTime.Now
 
 
-        For i = 0 To 5000000
+        For i = 0 To 50000000
 
 
             'x = InStrRev(benchString, benchChar, , CompareMethod.Text)
@@ -615,12 +617,16 @@ Partial Class Form1
             'tempStr = RTrim(benchString)
             'tempStr = benchString.TrimEnd
 
+            'Mid benchmark
+            'tempStr = Mid(benchString, 4, 5) 'debug 641  release 706
+            tempStr = benchString.Substring(4 - 1, 5) 'debug 515 release 564
+
 
 
         Next
         endTime = DateTime.Now
 
-        MsgBox("Miliseconds: " + (endTime - startTime).TotalMilliseconds.ToString + vbCrLf + "x=" + (x).ToString)
+        MsgBox("Miliseconds: " & (endTime - startTime).TotalMilliseconds.ToString & vbCrLf & "x=" & (x).ToString & vbCrLf & "tempStr:" & tempStr)
 
 
     End Sub
