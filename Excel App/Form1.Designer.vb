@@ -582,7 +582,8 @@ Partial Class Form1
     Private Sub btnBench_Click(sender As Object, e As EventArgs) Handles btnBench.Click
 
         Dim sb As New Text.StringBuilder()
-        Dim benchString As String = "1604 2RS(ZEN)"
+        Dim benchString As String = "1604 2RS(ZEN) "
+        Dim tempStr As String
         Dim benchChar As Char = "("
         Dim x As Integer
         Dim startTime, endTime As DateTime
@@ -591,15 +592,27 @@ Partial Class Form1
         startTime = DateTime.Now
 
 
-        For i = 0 To 5000000
+        For i = 0 To 50000000
+
+
             'x = InStrRev(benchString, benchChar, , CompareMethod.Text)
             'x = InStr(benchString, benchChar, CompareMethod.Text)
             'x = benchString.IndexOf(benchChar)
-            x = benchString.LastIndexOf(benchChar)
+            'x = benchString.LastIndexOf(benchChar)
+
+            'x = Len(benchString)
+            'x = benchString.Length
+
+            'tempStr = Trim(benchString)
+            'tempStr = benchString.Trim
+
+
+
+
         Next
         endTime = DateTime.Now
 
-        MsgBox("Miliseconds: " + (endTime - startTime).TotalMilliseconds.ToString + vbCrLf + "x=" + (x + 1).ToString)
+        MsgBox("Miliseconds: " + (endTime - startTime).TotalMilliseconds.ToString + vbCrLf + "x=" + (x).ToString)
 
 
     End Sub
