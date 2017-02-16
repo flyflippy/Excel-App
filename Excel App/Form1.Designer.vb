@@ -450,7 +450,10 @@ Partial Class Form1
         MsgBox("Пошла обработка массива")
         For i = lower0 To upper0
             tempstr = DataArray(i, 1)
+
             x = InStrRev(tempstr, xstr, , CompareMethod.Text)
+
+
             lenstr = Len(tempstr)
 
             finstr = Mid(tempstr, x + 1, lenstr - x - 1)
@@ -606,6 +609,8 @@ Partial Class Form1
             'tempStr = Trim(benchString)
             'tempStr = benchString.Trim
 
+            'tempStr = RTrim(benchString)
+            'tempStr = benchString.TrimEnd
 
 
 
