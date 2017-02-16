@@ -458,7 +458,8 @@ Partial Class Form1
 
             lenstr = Len(tempstr)
 
-            finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+            'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
+            finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
 
             If x <> 0 Then
                 finstr = Mid(tempstr, x + 1, lenstr - x - 1)
