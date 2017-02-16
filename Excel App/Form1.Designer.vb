@@ -454,8 +454,7 @@ Partial Class Form1
 
             'x = InStrRev(tempstr, xstr, , CompareMethod.Text)
             'Оптимизировано по скорости
-            x = tempstr.LastIndexOf(xstr) + 1
-
+            x = tempstr.LastIndexOf(xstr) + 1 'Оптимизировано вместо instrev
 
             lenstr = Len(tempstr)
 
