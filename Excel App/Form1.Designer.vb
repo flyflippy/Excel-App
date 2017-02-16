@@ -369,18 +369,19 @@ Partial Class Form1
 
 
 
-        Dim replacements(,) As String = {{"КАТАЛОГ FAG", "Заменено FAG"}, {"КАТАЛОГ SKF", "Заменено SKF"}, {"курукузя", "каракузя"}}
-
-        MsgBox(" dim 0: " + replacements.GetUpperBound(0).ToString + " dim1: " + replacements.GetUpperBound(1).ToString)
+        'Dim replacements(,) As String = {{"КАТАЛОГ FAG", "Заменено FAG"}, {"КАТАЛОГ SKF", "Заменено SKF"}, {"курукузя", "каракузя"}}
 
         'MsgBox(" dim 0: " + replacements.GetUpperBound(0).ToString + " dim1: " + replacements.GetUpperBound(1).ToString)
-        For i = 0 To replacements.GetUpperBound(0)
-            ' Лист.Cells.Replace(replacements(i, 0), replacements(i, 1))
 
-            MsgBox(replacements(i, 0) + " ///  " + replacements(i, 1))
-        Next
 
-        End
+        'For i = 0 To replacements.GetUpperBound(0)
+
+
+        '    MsgBox(replacements(i, 0) + " ///  " + replacements(i, 1))
+        'Next
+
+        'End
+
 
         'Открыть новую книгу Excel
         Dim _Excel As New Application 'Приложение Excel
