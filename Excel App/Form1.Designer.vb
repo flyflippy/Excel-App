@@ -451,7 +451,9 @@ Partial Class Form1
         For i = lower0 To upper0
             tempstr = DataArray(i, 1)
 
-            x = InStrRev(tempstr, xstr, , CompareMethod.Text)
+            'x = InStrRev(tempstr, xstr, , CompareMethod.Text)
+            'Оптимизировано по скорости
+            x = tempstr.LastIndexOf(xstr) + 1
 
 
             lenstr = Len(tempstr)
@@ -585,7 +587,7 @@ Partial Class Form1
     Private Sub btnBench_Click(sender As Object, e As EventArgs) Handles btnBench.Click
 
         Dim sb As New Text.StringBuilder()
-        Dim benchString As String = "1604 2RS(ZEN) "
+        Dim benchString As String = "1604 2RS(ZEN)"
         Dim tempStr As String
         Dim benchChar As Char = "("
         Dim x As Integer
@@ -595,7 +597,7 @@ Partial Class Form1
         startTime = DateTime.Now
 
 
-        For i = 0 To 50000000
+        For i = 0 To 5000000
 
 
             'x = InStrRev(benchString, benchChar, , CompareMethod.Text)
