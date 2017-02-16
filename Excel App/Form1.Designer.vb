@@ -545,11 +545,13 @@ Partial Class Form1
         tempstr = TextBox2.Text
         xstr = TextBox5.Text
 
-        x = InStrRev(tempstr, xstr, , CompareMethod.Text)
+        'x = InStrRev(tempstr, xstr, , CompareMethod.Text)
+        x = tempstr.LastIndexOf(xstr) + 1 'Оптимизировано вместо instrev
+
+
         lenstr = Len(tempstr)
 
         'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
-
         finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
 
 
