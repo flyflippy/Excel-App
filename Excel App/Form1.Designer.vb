@@ -537,6 +537,8 @@ Partial Class Form1
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
 
+
+
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim tempstr As String
         Dim xstr As Char
