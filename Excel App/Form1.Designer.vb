@@ -551,7 +551,7 @@ Partial Class Form1
         x = tempstr.LastIndexOf(xstr) + 1 'Оптимизировано вместо instrev
 
 
-        lenstr = Len(tempstr)
+        lenstr = tempstr.Length 'Оптимизировано вместо len
 
         'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
         finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
@@ -606,7 +606,7 @@ Partial Class Form1
         startTime = DateTime.Now
 
 
-        For i = 0 To 50000000
+        For i = 0 To 500000000
 
 
             'x = InStrRev(benchString, benchChar, , CompareMethod.Text)
@@ -615,7 +615,7 @@ Partial Class Form1
             'x = benchString.LastIndexOf(benchChar)
 
             'x = Len(benchString)
-            'x = benchString.Length
+            x = benchString.Length
 
             'tempStr = Trim(benchString)
             'tempStr = benchString.Trim
