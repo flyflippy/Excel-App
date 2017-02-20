@@ -478,6 +478,7 @@ Partial Class Form1
 
 
 
+
             lastArray(i - 1, 1) = finstr
             lastArray(i - 1, 0) = finstr2
             'MsgBox("finstr:" + finstr + "finstr2:" + finstr2)
