@@ -452,6 +452,7 @@ Partial Class Form1
 
             'x = InStrRev(tempstr, xstr, , CompareMethod.Text)
             'Оптимизировано по скорости
+
             x = tempstr.LastIndexOf(xstr) + 1 'Оптимизировано вместо instrev
 
             lenstr = tempstr.Length 'Оптимизировано вместо len
@@ -597,7 +598,7 @@ Partial Class Form1
     Private Sub btnBench_Click(sender As Object, e As EventArgs) Handles btnBench.Click
 
         Dim sb As New Text.StringBuilder()
-        Dim benchString As String = "1604 2RS(ZEN)"
+        Dim benchString As String = "1604 2RS(ZEN) "
         Dim tempStr As String = ""
         Dim benchChar As Char = "("
         Dim x As Integer
@@ -616,10 +617,12 @@ Partial Class Form1
             'x = benchString.LastIndexOf(benchChar)
 
             'x = Len(benchString)
-            x = benchString.Length
+            'x = benchString.Length
 
             'tempStr = Trim(benchString)
             'tempStr = benchString.Trim
+
+
 
             'tempStr = RTrim(benchString)
             'tempStr = benchString.TrimEnd
@@ -635,6 +638,6 @@ Partial Class Form1
 
         MsgBox("Miliseconds: " & (endTime - startTime).TotalMilliseconds.ToString & vbCrLf & "x=" & (x).ToString & vbCrLf & "tempStr:" & tempStr)
 
-
+        sb = Nothing
     End Sub
 End Class
