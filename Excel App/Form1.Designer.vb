@@ -454,7 +454,8 @@ Partial Class Form1
             'Оптимизировано по скорости
             x = tempstr.LastIndexOf(xstr) + 1 'Оптимизировано вместо instrev
 
-            lenstr = Len(tempstr)
+            lenstr = tempstr.Length 'Оптимизировано вместо len
+
 
             'finstr = Mid(tempstr, x + 1, lenstr - x - 1)
             'finstr = tempstr.Substring(x, lenstr - x - 1) 'оптимизировано вместо mid
