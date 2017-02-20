@@ -476,7 +476,7 @@ Partial Class Form1
 
             End If
 
-            lastArray.
+
 
             lastArray(i - 1, 1) = finstr
             lastArray(i - 1, 0) = finstr2
@@ -597,7 +597,7 @@ Partial Class Form1
 
         Dim sb As New Text.StringBuilder()
         Dim benchString As String = "1604 2RS(ZEN)"
-        Dim tempStr As String
+        Dim tempStr As String = ""
         Dim benchChar As Char = "("
         Dim x As Integer
         Dim startTime, endTime As DateTime
